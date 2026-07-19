@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intern Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="pagecontainer">
+        <section class="feedbackcard">
+            <header class="formheader">
+                <div class="headericon">★</div>
+                <h1>Intern Feedback</h1>
+                <p>
+                    Your feedback helps us improve your internship experience.
+                </p>
+            </header>
+            <form id="feedbackForm">
+                <div class="formrow">
+                    <div class="formgroup">
+                        <label for="name">
+                            Full Name
+                        </label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                        >
+                        <small class="fieldhint">
+                            3–50 characters
+                        </small>
+                        <small
+                            class="errormessage"
+                            id="nameError"
+                        ></small>
+
+                    </div>
+
+                    <div class="formgroup">
+                        <label for="email">
+                            Email
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                        >
+                        <small class="fieldhint">
+                            Enter a valid email
+                        </small>
+                        <small
+                            class="errormessage"
+                            id="emailError"
+                        ></small>
+                    </div>
+                </div>
+                <div class="formgroup">
+                    <label for="category">
+                        Category
+                    </label>
+                    <select
+                        id="category"
+                        name="category"
+                    >
+                        <option value="">
+                            Select a category
+                        </option>
+                        <option value="General">
+                            General
+                        </option>
+                        <option value="Bug report">
+                            Bug report
+                        </option>
+                        <option value="Suggestion">
+                            Suggestion
+                        </option>
+                    </select>
+                    <small class="fieldhint">
+                        Choose one option
+                    </small>
+
+                    <small
+                        class="errormessage"
+                        id="categoryError"
+                    ></small>
+
+                </div>
+                <fieldset class="formgroup ratinggroup">
+                    <legend>
+                        How was your week? (1–5)
+                    </legend>
+                    <div class="ratingoptions">
+                        <label class="ratingoption">
+                            <input
+                                type="radio"
+                                name="rating"
+                                value="1"
+                            >
+                            <span>1</span>
+                            <small>Poor</small>
+                        </label>
+                        <label class="ratingoption">
+                            <input
+                                type="radio"
+                                name="rating"
+                                value="2"
+                            >
+                            <span>2</span>
+                            <small>Fair</small>
+                        </label>
+                        <label class="ratingoption">
+                            <input
+                                type="radio"
+                                name="rating"
+                                value="3"
+                            >
+                            <span>3</span>
+                            <small>Average</small>
+                        </label>
+                        <label class="ratingoption">
+                            <input
+                                type="radio"
+                                name="rating"
+                                value="4"
+                            >
+                            <span>4</span>
+                            <small>Good</small>
+                        </label>
+                        <label class="ratingoption">
+                            <input
+                                type="radio"
+                                name="rating"
+                                value="5"
+                            >
+                            <span>5</span>
+                            <small>Excellent</small>
+                        </label>
+
+                    </div>
+                    <small
+                        class="errormessage"
+                        id="ratingError"
+                    ></small>
+                </fieldset>
+                <div class="formgroup">
+                    <label for="message">
+                        Your Feedback
+                    </label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        maxlength="500"
+                        placeholder="Write your feedback here..."
+                    ></textarea>
+
+                    <div class="messageinfo">
+                        <small class="fieldhint">
+                            10–500 characters
+                        </small>
+                        <small id="characterCount">
+                            0 / 500
+                        </small>
+
+                    </div>
+                    <small
+                        class="errormessage"
+                        id="messageError"
+                    ></small>
+
+                </div>
+                <div
+                    id="statusMessage"
+                    class="statusmessage"
+                    role="status"
+                    aria-live="polite"></div>
+                <button
+                    type="submit"
+                    id="submitButton">
+                    Submit Feedback
+                </button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
